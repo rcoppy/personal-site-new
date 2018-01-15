@@ -1,0 +1,98 @@
+// skel-baseline v3.0.1 | (c) n33 | skel.io | MIT licensed
+
+/* Banner */
+
+	
+
+	#banner {
+		@include banner-edges-color(_palette(bg));
+		@include padding(8em, 0);
+		background-color: #f6f6f6;
+		background-image: url('../../images/cover.jpg');
+		background-attachment: fixed;
+		background-size: cover;
+		text-align: center;
+		margin-bottom: 1em; // _size(banner-edges, large) + 1em;
+		position: relative;
+
+		&:after {
+			height: _size(banner-edges, large);
+			
+			@include breakpoint(xlarge) {
+				height: _size(banner-edges, large) * 2; 
+			}
+
+			@include breakpoint(large) {
+				height: _size(banner-edges, large) * 1.3;
+				bottom: -0.65 * _size(banner-edges, large);  
+			}
+
+			width: 100%; 
+			//position: relative; 
+			// top: _size(banner-edges, large); 
+			//background-size: cover; 
+			left: 0; 
+			background-repeat: no-repeat;
+			background-size: 100% 100%;
+			content: '';
+			display: block;
+			// height: (_size(wrapper-edges, large) * 1.1); //1.0076923076923076923076923076923);
+			position: absolute;
+			// width: 100%;
+			overflow: hidden; 
+		}
+
+		
+
+		/*&:after {
+			@include vendor('transform', 'scaleY(-1)');
+			bottom: (_size(wrapper-edges, large) * -1.09 ); //* 0.99738461538461538461538461538462);
+			//height: (_size(wrapper-edges, large) * -2); 
+			left: 0;
+		}*/
+
+		h2 {
+			font-size: 4em;
+			line-height: 1em;
+			margin: 0 0 0.5em 0;
+			padding: 0;
+		}
+
+		p {
+			font-size: 1.5em;
+			margin-bottom: 1.75em; 
+		}
+
+		@include breakpoint(xlarge) {
+			@include padding(7em, 0, (0, 0, 2em, 0));
+		}
+
+		@include breakpoint(large) {
+			@include padding(5em, 0);
+
+			h2 {
+				font-size: 3.5em;
+			}
+		}
+
+		@include breakpoint(medium) {
+			@include padding(6em, 2em);
+		}
+
+		@include breakpoint(small) {
+			@include padding(4em, 2em, (0, 0, 2em, 0));
+			// padding-bottom: 4em; // force this--triangle won't clip
+
+			h2 {
+				font-size: 2.25em;
+			}
+
+			p {
+				font-size: 1.25em;
+			}
+		}
+
+		@include breakpoint(xsmall) {
+			@include padding(4em, 2em, (0, 0, 2em, 0));
+		}
+	}

@@ -1,0 +1,67 @@
+// skel-baseline v3.0.1 | (c) n33 | skel.io | MIT licensed
+
+// Misc.
+	$misc: (
+		z-index-base:		10000
+	);
+
+// Duration.
+	$duration: (
+		nav:				0.5s,
+		transition:			0.2s
+	);
+
+// Size.
+	$size: (
+		border-radius:		4px,
+		border-width:		1px,
+		element-height:		2.75em,
+		element-margin:		2em,
+		banner-edges: (
+			large:				6.5em,
+			medium:				4.75em,
+			small:				2.5em
+		)
+	);
+
+// Font.
+	$font: (
+		family:				('Raleway', Helvetica, sans-serif),
+		family-fixed:		('Courier New', monospace),
+		weight:				normal,
+		weight-bold:		bold
+	);
+
+// Palette.
+	$palette: (
+		bg:					#E7E8ED,
+		fg:					#0F1427,
+		fg-bold:			#0F1427,
+		fg-light:			#394B93,
+		border:				rgba(144,144,144,0.25),
+		border-bg:			rgba(144,144,144,0.075),
+		border2:			rgba(144,144,144,0.5),
+		border2-bg:			rgba(144,144,144,0.2),
+
+		accent1: (
+			bg:				#59A0B0,
+			fg:				#2FBDDB, //mix(#59A0B0, #ffffff, 25%),
+			fg-bold:		#ffffff,
+			fg-light:		mix(#59A0B0, #ffffff, 40%),
+			border:			rgba(255,255,255,0.25),
+			border-bg:		rgba(255,255,255,0.075),
+			border2:		rgba(255,255,255,0.5),
+			border2-bg:		rgba(255,255,255,0.2)
+		),
+
+		accent2: (
+			bg:				#5a5a5a,
+			fg:				mix(#5a5a5a, #ffffff, 25%),
+			fg-bold:		#ffffff,
+			fg-light:		mix(#5a5a5a, #ffffff, 40%),
+			border:			rgba(255,255,255,0.15),
+			border-bg:		rgba(255,255,255,0.075),
+			border2:		rgba(255,255,255,0.5),
+			border2-bg:		rgba(255,255,255,0.2)
+		)
+	);
