@@ -8,7 +8,7 @@
 
 	&.entries {
 		
-		$flexmargin: 0.75em; 
+		$flexmargin: 0.5em; 
 		
 		margin: 0 -1 * $flexmargin 0 -1 * $flexmargin; 
 
@@ -30,7 +30,7 @@
 
 		div {
 			width: auto; 
-			max-width: 30%; 
+			max-width: 20%; 
 			margin: 0 $flexmargin $flexmargin $flexmargin; 
 			padding: $flexmargin $flexmargin $flexmargin $flexmargin;
 
@@ -55,7 +55,7 @@
 			height: 256px;
 
 			
-			overflow: hidden; 
+			// overflow: hidden; 
 			.image {
 				
 				background-color: darken(_palette(bg), 10); 
