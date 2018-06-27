@@ -64,6 +64,10 @@
 		a {
 			color: inherit;
 			text-decoration: none;
+
+			&:hover {
+				color: lighten(_palette(fg-bold), 32);
+			}
 		}
 	}
 
@@ -150,4 +154,8 @@
 
 	.align-right {
 		text-align: right;
+	}
+
+	header.truncated-margin p {
+		margin-bottom: (_size(element-margin) * 0.15);
 	}
