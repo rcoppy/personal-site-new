@@ -2018,10 +2018,13 @@ ul.portfolio-links {
     font-style: italic; }
 
 /* Header */
-body {
-  padding-top: 3.125em; }
-
 #header {
+  -moz-transition: background 0.5s ease, visibility 0.5s ease, opacity 0.5s ease;
+  -webkit-transition: background 0.5s ease, visibility 0.5s ease, opacity 0.5s ease;
+  -ms-transition: background 0.5s ease, visibility 0.5s ease, opacity 0.5s ease;
+  transition: background 0.5s ease, visibility 0.5s ease, opacity 0.5s ease;
+  visibility: hidden;
+  opacity: 0;
   background: #3b3b3b;
   color: #d6d6d6;
   cursor: default;
@@ -2033,6 +2036,12 @@ body {
   top: 0;
   width: 100%;
   z-index: 10001; }
+  #header.scrolling {
+    position: fixed;
+    visibility: visible;
+    opacity: 1;
+    left: 0;
+    top: 0; }
   #header > h1 {
     color: #ffffff;
     display: inline-block;
@@ -2085,9 +2094,6 @@ body {
           padding-right: 1em; } }
 
 @media screen and (max-width: 980px) {
-  body {
-    padding-top: 44px; }
-
   #header {
     height: 44px;
     line-height: 44px; }
@@ -2288,5 +2294,8 @@ body {
         border-left: 0;
         margin-left: 0;
         padding-left: 0; } }
+
+body:not(.is-preload) > header#header:not(.scrolling) {
+  position: absolute; }
 
 /*# sourceMappingURL=main.css.map */

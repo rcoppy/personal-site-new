@@ -2,11 +2,33 @@
 
 /* Header */
 
-	body {
-		padding-top: 3.125em;
-	}
+	// body {
+	//	padding-top: 3.125em;
+	// }
 
 	#header {
+		
+		@include vendor('transition', (
+			'background 0.5s ease',
+			'visibility 0.5s ease',
+			'opacity 0.5s ease'
+		));
+
+		visibility: hidden;
+		opacity: 0; // same effect as display: none; except doesn't take element out of document flow
+
+		&.scrolling {
+			position: fixed;
+
+			visibility: visible;
+			opacity: 1;
+
+			left: 0;
+			top: 0;
+
+			// background: lighten(_palette(accent2, bg), 12);
+		}
+
 		background: darken(_palette(accent2, bg), 12);
 		color: _palette(accent2, fg);
 		cursor: default;
@@ -81,9 +103,9 @@
 	}
 
 	@include breakpoint(medium) {
-		body {
-			padding-top: 44px;
-		}
+		// body {
+		//	padding-top: 44px;
+		// }
 
 		#header {
 			height: 44px;
